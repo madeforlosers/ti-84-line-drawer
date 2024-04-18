@@ -1,0 +1,128 @@
+AxesOff
+CoordOff
+GridOff
+LabelOff
+8→A
+8→B
+9→C
+9→D
+1→E
+0→F
+0.5→H
+0→I
+Fill(0,[A]
+Lbl L
+getKey→G
+If G=34
+D-H→D
+If G=25
+D+H→D
+If G=24
+C-H→C
+If G=26
+C+H→C
+If G=21:Then
+E-1→E
+If E<1
+1→E
+End
+If G=105:Then
+A→[A](E,1)
+B→[A](E,2)
+C→[A](E,3)
+D→[A](E,4)
+E+1→E
+C→A
+D→B
+End
+If G=22:Then
+ClrDraw
+Text(2,2,"ARROW KEYS TO MOVE"
+Text(11,2,"ENTER TO PLOT"
+Text(21,2,"VARS SAVE TO [J]"
+Text(41,2,"5 TO TOGGLE HUD"
+Text(53,2,"MADE BY JAMES. 2023
+End
+If G=65
+GridOn
+If G=75
+GridOff
+If G=83:Then
+If F=1:Then
+0→F
+Else
+1→F
+End
+End
+If G=44:Then
+ClrHome
+Disp "THIS WILL"
+Disp "OVERWRITE [J]."
+Disp "CONTINUE? (1/0)"
+Input W
+If W=1:Then
+Line(5,9,10,5,9,12
+Line(6,10,6+(E-1)/10,10
+Line(6,12,6+(E-1)/10,12)
+Line(6+(E/10),10,6+(E/10),12
+{E,4}→dim([J])
+Fill(0,[J])
+For(Z,1,E-1
+[A](Z,1)→[J](Z,1)
+[A](Z,2)→[J](Z,2)
+[A](Z,3)→[J](Z,3)
+[A](Z,4)→[J](Z,4)
+Line(6+(Z/10),10,6+(Z/10),12
+End
+Text(10,10,"Saved to [J]!"
+End
+End
+If G=95:Then
+If H=0.1:Then
+1→H
+Text(50,2,"CHANGED TO 1.0"
+Else
+If H=0.5:Then
+0.1→H
+Text(50,2,"CHANGED TO 0.1"
+Else
+If H=1:Then
+0.5→H
+Text(50,2,"CHANGED TO 0.5"
+End
+End
+End
+End
+If G=72:Then
+If I=1:Then
+0→Xmin
+20→Xmax
+0→Ymin
+20→Ymax
+0→I
+Else
+C-5→Xmin
+C+5→Xmax
+D+5→Ymax
+D-5→Ymin
+1→I
+End
+End
+If G≠0 and G≠22 and G≠44 and G≠95
+Then
+ClrDraw
+For(Z,1,E-1
+Line([A](Z,1),[A](Z,2),[A](Z,3),[A](Z,4)
+End
+Line(A,B,C,D)
+If F=0:Then
+Text(2,2,"lines used:"
+Text(2,37,E
+Else
+Text(2,2,"X:"
+Text(2,11,C
+Text(8,2,"Y:"
+Text(8,11,D
+End
+End
+Goto L
