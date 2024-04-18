@@ -19,3 +19,4 @@ VARS to save drawing to [J] (will add program later to view drawing)
 ÷/× to turn on and off grid (respectively)
 
 
+copyright james c 2024
