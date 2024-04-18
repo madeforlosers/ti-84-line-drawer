@@ -1,0 +1,10 @@
+For(Z,1,100
+If [J](Z,1)=0:Then
+Z→E
+101→Z
+End
+End
+ClrDraw
+For(Z,1,E-1
+Line([J](Z,1),[J](Z,2),[J](Z,3),[J](Z,4)
+End
