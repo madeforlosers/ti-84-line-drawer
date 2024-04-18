@@ -8,7 +8,7 @@ enter to plot
 
 MODE to see menu / basic controls
 
-VARS to save drawing to [J] (will add program later to view drawing)
+VARS to save drawing to [J] (view drawing with LINEVIEW)
 
 5 to switch between coords HUD and "lines used" HUD
 
