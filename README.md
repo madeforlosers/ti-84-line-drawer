@@ -4,6 +4,8 @@ arrow keys to move
 
 enter to plot
 
+2ND to remove last line
+
 MODE to see menu / basic controls
 
 VARS to save drawing to [J] (will add program later to view drawing)
