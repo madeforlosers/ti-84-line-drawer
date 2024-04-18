@@ -12,7 +12,7 @@ VARS to save drawing to [J] (will add program later to view drawing)
 
 7 to zoom in
 
-+ to change cursor precision (0.5 is default, goes from 0.5 -> 1.0 -> 0.1 -> 0.5
+\+ to change cursor precision (0.5 is default, goes from 0.5 -> 1.0 -> 0.1 -> 0.5
 
 ÷/× to turn on and off grid (respectively)
 
